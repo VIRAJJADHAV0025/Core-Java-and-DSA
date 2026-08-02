@@ -8,6 +8,7 @@ This repository contains my Core Java programs and Data Structures & Algorithms 
 - `methodsandfunctions` - Methods and functions
 - `patterns` - Basic pattern programs
 - `advancedpatterns` - Advanced pattern programs
+- `Array` - Basic and Medium array problems
 
 ## Technologies
 
