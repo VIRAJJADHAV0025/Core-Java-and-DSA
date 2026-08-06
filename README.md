@@ -8,8 +8,9 @@ This repository contains my Core Java programs and Data Structures & Algorithms 
 - `methodsandfunctions` - Methods and functions
 - `patterns` - Basic pattern programs
 - `advancedpatterns` - Advanced pattern programs
-- `Array` - Basic and Medium array Algorithm
-- `Binary` - Basic and Medium sort Algorithm
+- `Arrays` - Basic and Medium array Algorithm
+- `Basic Sort Algorithms` - Basic and Medium sort Algorithm
+- `OOPS` - Object-Oriented Programming System
 
 ## Technologies
 
