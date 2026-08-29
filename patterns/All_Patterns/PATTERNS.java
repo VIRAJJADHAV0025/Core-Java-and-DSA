@@ -240,6 +240,13 @@ public class PATTERNS {
     }
 
     public static void pattern12(int n) {
+        /*
+        1        1
+        12      21
+        123    321
+        1234  4321
+        1234554321
+        */
         int space = 2 * (n-1);
         for(int i=1; i<=n; i++) {
             //numbers
