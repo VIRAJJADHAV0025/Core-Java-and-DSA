@@ -335,6 +335,52 @@ public class PATTERNS {
             }
             System.out.println();
         }
+        System.out.println();
+    }
+
+    public static void pattern17(int n) {
+        /*
+                A 
+              A B A 
+            A B C B A 
+          A B C D C B A 
+        A B C D E D C B A 
+        */
+        for(int i=0; i<n; i++) {
+            //space
+            for(int j=0; j<n-i-1; j++) {
+                System.out.print("  ");
+            }
+            //Characters
+            char ch = 'A';
+            int breakpoint = (2*i+1) / 2;
+            for(int j=1; j<=2*i + 1; j++) {
+                System.out.print(ch + " ");
+                if(j<=breakpoint)
+                    ch++;
+                else
+                    ch--;
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void pattern18(int n) {
+        /*
+        E 
+        D E 
+        C D E 
+        B C D E 
+        A B C D E 
+        */
+        for(int i=0; i<n; i++) {
+            for(char ch = (char) ('E' - i); ch<= 'E'; ch++){
+                System.out.print(ch + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -359,6 +405,8 @@ public class PATTERNS {
         pattern14(n);
         pattern15(n);
         pattern16(n);
+        pattern17(n);
+        pattern18(n);
 
         sc.close();
     }
