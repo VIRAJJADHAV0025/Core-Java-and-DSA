@@ -383,6 +383,169 @@ public class PATTERNS {
         System.out.println();
     }
 
+    public static void pattern19(int n) {
+        /*
+        **********
+        ****  ****
+        ***    ***
+        **      **
+        *        *
+        *        *
+        **      **
+        ***    ***
+        ****  ****
+        **********
+        */
+
+        // First part 
+        /*
+        
+        **********
+        ****  ****
+        ***    ***
+        **      **
+        *        *
+        
+        */
+        int  initialSpaces = 0;
+        for(int i=0; i<n; i++) {
+            // Stars
+            for(int j=1; j<=n-i; j++) {
+                System.out.print("*");
+            }
+            
+            // spcaes
+            for(int j=1; j<=initialSpaces;j++) {
+                System.out.print(" ");
+            }
+
+            // Stars
+            for(int j=1; j<=n-i; j++) {
+                System.out.print("*");
+            }
+
+            initialSpaces += 2;
+            System.out.println();
+        }
+        // Second Part
+        /*
+        *        *
+        **      **
+        ***    ***
+        ****  ****
+        **********
+        */
+        initialSpaces = 2*n - 2;
+        for(int i =1; i<=n; i++) {
+            // Stars
+            for(int j=1; j<=i; j++) {
+                System.out.print("*");
+            }
+            
+            // spcaes
+            for(int j=1; j<=initialSpaces;j++) {
+                System.out.print(" ");
+            }
+
+            // Stars
+            for(int j=1; j<=i; j++) {
+                System.out.print("*");
+            }
+
+            initialSpaces -= 2;
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void pattern20(int n) {
+        /*
+        
+        *        *
+        **      **
+        ***    ***
+        ****  ****
+        **********
+        ****  ****
+        ***    ***
+        **      **
+        *        *
+
+        */
+        int initialSpaces = 2*n - 2;
+        for(int i=1; i<=2*n-1; i++) {
+            int stars = i;
+            if(i > n)
+                stars = 2*n - i; 
+
+            // Stars
+            for(int j=1; j<=stars; j++) {
+                System.out.print("*");
+            }
+
+            // Spaces
+            for(int j=1; j<=initialSpaces; j++) {
+                System.out.print(" ");
+            }
+
+            // Stars
+            for(int j=1; j<=stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            if(i < n)
+                initialSpaces -= 2;
+            else
+                initialSpaces += 2;
+        }
+        System.out.println();
+    }
+
+    public static void pattern21(int n) {
+        /*
+        
+        *****
+        *   *
+        *   *
+        *   *
+        *****
+
+        */
+        for(int i=0; i<n; i++) {
+            for(int j=0; j<n; j++) {
+                if(i == 0 || j == 0 || i == n-1 || j == n-1) 
+                    System.out.print("*");
+                else 
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void pattern22(int n) {
+        /*
+        4 4 4 4 4 4 4 
+        4 3 3 3 3 3 4 
+        4 3 2 2 2 3 4 
+        4 3 2 1 2 3 4 
+        4 3 2 2 2 3 4 
+        4 3 3 3 3 3 4 
+        4 4 4 4 4 4 4 
+        */
+        for(int i=0; i<2*n-1; i++) {
+            for(int j=0; j<2*n-1; j++) {
+                int top = i;
+                int left = j;
+                int right = (2*n - 2) - j;
+                int down = (2*n - 2) - i;
+                System.out.print(n - (Math.min(Math.min(top, down), Math.min(left, right))) + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
@@ -407,6 +570,10 @@ public class PATTERNS {
         pattern16(n);
         pattern17(n);
         pattern18(n);
+        pattern19(n);
+        pattern20(n);
+        pattern21(n);
+        pattern22(n);
 
         sc.close();
     }
