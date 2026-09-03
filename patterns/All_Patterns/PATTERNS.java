@@ -1,6 +1,38 @@
 import java.util.Scanner;
 
 public class PATTERNS {
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a n number: ");
+        int n = sc.nextInt();
+
+        pattern1(n);
+        pattern2(n);
+        pattern3(n);
+        pattern4(n);
+        pattern5(n);
+        pattern6(n);
+        pattern7(n);
+        pattern8(n);
+        pattern9(n);
+        pattern10(n);
+        pattern11(n);
+        pattern12(n);
+        pattern13(n);
+        pattern14(n);
+        pattern15(n);
+        pattern16(n);
+        pattern17(n);
+        pattern18(n);
+        pattern19(n);
+        pattern20(n);
+        pattern21(n);
+        pattern22(n);
+
+        sc.close();
+    }
+
     public static void pattern1(int n) {
         /*
         
@@ -546,35 +578,4 @@ public class PATTERNS {
         System.out.println();
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        System.out.print("Enter a n number: ");
-        int n = sc.nextInt();
-
-        pattern1(n);
-        pattern2(n);
-        pattern3(n);
-        pattern4(n);
-        pattern5(n);
-        pattern6(n);
-        pattern7(n);
-        pattern8(n);
-        pattern9(n);
-        pattern10(n);
-        pattern11(n);
-        pattern12(n);
-        pattern13(n);
-        pattern14(n);
-        pattern15(n);
-        pattern16(n);
-        pattern17(n);
-        pattern18(n);
-        pattern19(n);
-        pattern20(n);
-        pattern21(n);
-        pattern22(n);
-
-        sc.close();
-    }
 }
